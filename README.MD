@@ -1,4 +1,4 @@
-# 📚 Course-RAG — AI-Powered Course Planning Assistant
+# Course-RAG — AI-Powered Course Planning Assistant
 
 An **agentic RAG (Retrieval-Augmented Generation)** system that reads your course materials (PDFs & HTML files) and answers academic questions using AI — with proper citations.
 
@@ -6,7 +6,7 @@ Built with **LangChain**, **FAISS**, **HuggingFace Embeddings**, and **CrewAI** 
 
 ---
 
-## 🧠 How It Works (The Big Picture)
+## How It Works (The Big Picture)
 
 The system works in two main phases:
 
@@ -15,7 +15,7 @@ The system works in two main phases:
 
 ---
 
-## 🔄 The Complete Pipeline
+## The Complete Pipeline
 
 ### Step 1: Document Ingestion (Loading)
 
@@ -27,7 +27,7 @@ The system works in two main phases:
 
 **In simple words:** _Think of this step as a librarian reading every book and marking which page and book each paragraph belongs to._
 
-📁 **Source:** `src/ingest.py` → `ingest_data()`
+**Source:** `src/ingest.py` → `ingest_data()`
 
 ---
 
@@ -43,7 +43,7 @@ The system works in two main phases:
 
 **In simple words:** _Imagine cutting a long newspaper article into index cards, where each card slightly overlaps with the next so you don't miss anything at the edges._
 
-📁 **Source:** `src/ingest.py` → `RecursiveCharacterTextSplitter`
+**Source:** `src/ingest.py` → `RecursiveCharacterTextSplitter`
 
 ---
 
@@ -59,7 +59,7 @@ The system works in two main phases:
 
 **In simple words:** _This step translates each index card from English into a secret code of numbers. Cards about similar topics get similar codes._
 
-📁 **Source:** `src/ingest.py` → `HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")`
+**Source:** `src/ingest.py` → `HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")`
 
 ---
 
@@ -77,8 +77,8 @@ The system works in two main phases:
 
 **In simple words:** _Think of FAISS as a magical filing cabinet. You describe what you're looking for, and it instantly pulls out the 3 most relevant index cards._
 
-📁 **Source:** `src/rag_tool.py` → `CatalogRetrievalTool`  
-📂 **Stored at:** `embeddings/index.faiss` + `embeddings/index.pkl`
+**Source:** `src/rag_tool.py` → `CatalogRetrievalTool`  
+**Stored at:** `embeddings/index.faiss` + `embeddings/index.pkl`
 
 ---
 
@@ -88,56 +88,56 @@ The system works in two main phases:
 
 The agents run **sequentially** — each one passes its output to the next:
 
-| # | Agent | Role | What It Does |
-|---|-------|------|-------------|
-| 1 | **Intake Agent** | Student Intake Specialist | Classifies your question as either a **Knowledge Query** (e.g., "What is DBMS?") or a **Planning Query** (e.g., "Can I take CS301?"). Prepares the question for the next agent. |
-| 2 | **Retriever Agent** | Catalog Research Specialist | Uses the FAISS vector store to search for relevant chunks. Returns the most relevant facts with source citations. This is the only agent with access to the search tool. |
-| 3 | **Planner Agent** | Academic Advisor & Knowledge Expert | Takes the retrieved information and builds a comprehensive answer. For knowledge queries, it explains concepts. For planning queries, it checks prerequisites and proposes course plans. |
-| 4 | **Verifier Agent** | Quality & Citation Auditor | Final quality check — ensures every claim has a citation, the answer addresses the question, and the response follows a structured format. If the docs don't have the answer, it enforces safe abstention. |
+| #   | Agent               | Role                                | What It Does                                                                                                                                                                                               |
+| --- | ------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Intake Agent**    | Student Intake Specialist           | Classifies your question as either a **Knowledge Query** (e.g., "What is DBMS?") or a **Planning Query** (e.g., "Can I take CS301?"). Prepares the question for the next agent.                            |
+| 2   | **Retriever Agent** | Catalog Research Specialist         | Uses the FAISS vector store to search for relevant chunks. Returns the most relevant facts with source citations. This is the only agent with access to the search tool.                                   |
+| 3   | **Planner Agent**   | Academic Advisor & Knowledge Expert | Takes the retrieved information and builds a comprehensive answer. For knowledge queries, it explains concepts. For planning queries, it checks prerequisites and proposes course plans.                   |
+| 4   | **Verifier Agent**  | Quality & Citation Auditor          | Final quality check — ensures every claim has a citation, the answer addresses the question, and the response follows a structured format. If the docs don't have the answer, it enforces safe abstention. |
 
 **In simple words:** _It's like asking a question at a university help desk with four staff members — one understands your question, one looks up the records, one drafts the answer, and one double-checks everything before giving you the final response._
 
-📁 **Source:** `src/agents.py`, `src/tasks.py`, `src/main.py`
+**Source:** `src/agents.py`, `src/tasks.py`, `src/main.py`
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Course-RAG/
-├── data/                    # 📄 Your course materials (PDFs + HTML)
+├── data/                    # Your course materials (PDFs + HTML)
 │   ├── Lesson_01_Fundamentals.pdf
 │   ├── Lesson_12_Intro_to_C++.pdf
 │   ├── Overview_Of_Computer_Science_Syllabus.pdf
 │   ├── Cancellation of Admission & Refund Policy.html
 │   └── ... (28 documents total)
 │
-├── src/                     # 🧠 Core source code
+├── src/                     # Core source code
 │   ├── ingest.py            # Document loading, chunking, embedding, and FAISS storage
 │   ├── rag_tool.py          # CrewAI tool that searches the FAISS vector store
 │   ├── agents.py            # Defines the 4 AI agents and their roles
 │   ├── tasks.py             # Defines what each agent should do
 │   └── main.py              # Entry point — runs a query through the full pipeline
 │
-├── embeddings/              # 💾 FAISS vector store (generated by ingest.py)
+├── embeddings/              # FAISS vector store (generated by ingest.py)
 │   ├── index.faiss
 │   └── index.pkl
 │
 ├── scripts/
-│   └── evaluate.py          # 🧪 25-query evaluation suite across 4 categories
+│   └── evaluate.py          # 25-query evaluation suite across 4 categories
 │
-├── output/                  # 📊 Evaluation results
+├── output/                  # Evaluation results
 │   ├── eval_log.txt
 │   └── report_log.txt
 │
-├── requirements.txt         # 📦 Python dependencies
-├── .env                     # 🔑 API keys (OPENROUTER_API_KEY)
-└── README.MD                # 📖 You are here!
+├── requirements.txt         # Python dependencies
+├── .env                     # API keys (OPENROUTER_API_KEY)
+└── README.MD                # You are here!
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Install Dependencies
 
@@ -168,6 +168,7 @@ python -m src.ingest
 ```
 
 This will:
+
 - Load all PDFs and HTML files from `data/`
 - Split them into ~1000-character chunks with 150-character overlap
 - Generate embeddings using `all-MiniLM-L6-v2`
@@ -185,16 +186,16 @@ python -m src.main "What is the exam paper structure for Computer Science?"
 
 ---
 
-## 🧪 Evaluation
+## Evaluation
 
 The project includes a **25-query evaluation suite** across 4 categories:
 
-| Category | # Queries | Purpose |
-|----------|-----------|---------|
-| Prerequisite Checks | 10 | Tests if the system can correctly determine course prerequisites |
-| Prerequisite Chain Questions | 5 | Tests multi-hop reasoning across multiple lessons |
-| Program Requirement Questions | 5 | Tests knowledge of syllabus structure, exam format, and policies |
-| Not-in-Docs / Trick Questions | 5 | Tests if the system correctly refuses to answer when info isn't available |
+| Category                      | # Queries | Purpose                                                                   |
+| ----------------------------- | --------- | ------------------------------------------------------------------------- |
+| Prerequisite Checks           | 10        | Tests if the system can correctly determine course prerequisites          |
+| Prerequisite Chain Questions  | 5         | Tests multi-hop reasoning across multiple lessons                         |
+| Program Requirement Questions | 5         | Tests knowledge of syllabus structure, exam format, and policies          |
+| Not-in-Docs / Trick Questions | 5         | Tests if the system correctly refuses to answer when info isn't available |
 
 Run the evaluation:
 
@@ -206,32 +207,37 @@ Results are saved to `output/eval_log.txt` and `output/report_log.txt`.
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| Document Loading | LangChain (`PyPDFLoader`, `BSHTMLLoader`) | Read PDFs and HTML files |
-| Text Splitting | LangChain (`RecursiveCharacterTextSplitter`) | Break documents into searchable chunks |
-| Embeddings | HuggingFace (`all-MiniLM-L6-v2`) | Convert text to 384-dim vectors (runs locally) |
-| Vector Store | FAISS (Facebook AI Similarity Search) | Fast similarity search over vectors |
-| LLM | OpenRouter (`nvidia/nemotron-3-super-120b`) | Powers the AI agents' reasoning |
-| Agent Framework | CrewAI | Orchestrates the 4-agent sequential pipeline |
+| Component        | Technology                                   | Purpose                                        |
+| ---------------- | -------------------------------------------- | ---------------------------------------------- |
+| Document Loading | LangChain (`PyPDFLoader`, `BSHTMLLoader`)    | Read PDFs and HTML files                       |
+| Text Splitting   | LangChain (`RecursiveCharacterTextSplitter`) | Break documents into searchable chunks         |
+| Embeddings       | HuggingFace (`all-MiniLM-L6-v2`)             | Convert text to 384-dim vectors (runs locally) |
+| Vector Store     | FAISS (Facebook AI Similarity Search)        | Fast similarity search over vectors            |
+| LLM              | OpenRouter (`nvidia/nemotron-3-super-120b`)  | Powers the AI agents' reasoning                |
+| Agent Framework  | CrewAI                                       | Orchestrates the 4-agent sequential pipeline   |
 
 ---
 
-## 📝 Key Concepts Explained
+## Key Concepts Explained
 
 ### What is RAG?
+
 **Retrieval-Augmented Generation** — instead of asking the AI to answer from memory (which can hallucinate), we first _retrieve_ relevant documents and then _generate_ an answer based on those documents. This makes the answers grounded in your actual course materials.
 
 ### What is an Embedding?
+
 A way to represent text as a list of numbers that captures its meaning. Similar texts get similar numbers, making it possible to search by meaning rather than exact keywords.
 
 ### What is a Vector Store?
+
 A database optimized for storing and searching embeddings. FAISS can find the most similar vectors in milliseconds, even with thousands of chunks.
 
 ### What is CrewAI?
+
 A framework for building teams of AI agents that work together. Each agent has a specific role and passes its work to the next agent, creating a pipeline of intelligent processing.
 
 ### What is Agentic RAG?
+
 Regular RAG just retrieves and generates. **Agentic RAG** adds intelligent agents that can classify queries, make decisions, verify citations, and handle edge cases — making the system smarter and more reliable.
