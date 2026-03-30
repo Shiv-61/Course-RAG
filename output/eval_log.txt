@@ -1,0 +1,730 @@
+COURSE-RAG EVALUATION LOG
+Run at: 2026-03-30 12:30:04
+Total queries: 30
+================================================================================
+
+================================================================================
+  PREREQUISITE CHECKS
+  Eligible / not-eligible questions checking if prerequisites are met.
+================================================================================
+
+── Q1: Do I need to study binary logic before learning about computer networks?
+   Time: 95.4s
+
+Answer / Plan:
+Yes, you should study Binary Logic before learning about Computer Networks.
+
+Why (requirements/prereqs satisfied):
+The syllabus lists Binary Logic (Lesson 2) before Data Communication and Networking (Lesson 5) in Module 1: Basic Computing. The sequential ordering indicates that Binary Logic is a prerequisite for understanding networking concepts such as data encoding and transmission protocols.
+
+Citations:
+Overview_Of_Computer_Science_Syllabus.pdf (Page 6), Lesson_02_Binary_logic.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q2: Can I directly start learning about inheritance in C++ without studying OOP concepts first?
+   Time: 155.1s
+
+Answer / Plan:
+No, you should NOT start learning about inheritance without studying OOP concepts first.
+
+Why (requirements/prereqs satisfied):
+The catalog places Inheritance (Lesson 19) after Introduction to OOP (Lesson 13), Control Statements (Lesson 14), Functions (Lesson 15), Arrays (Lesson 16), Structures/Typedef/Enums (Lesson 17), and Class & Objects (Lesson 18). Inheritance builds directly on class definitions, constructors/destructors, and object instantiation covered in Lessons 13 and 18.
+
+Citations:
+Lesson_19_Inheritance.pdf (Page 0), Lesson_13_OOP.pdf (Page 4), Lesson_18_Class_&_Objects.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Assumes the lesson sequence reflects prerequisite structure.
+
+------------------------------------------------------------
+
+── Q3: Is it necessary to complete the fundamentals of computing before starting the C++ programming module?
+   Time: 85.7s
+
+Answer / Plan:
+Yes, it is recommended to complete Module 1 (Basic Computing) before starting Module 3 (Programming in C++).
+
+Why (requirements/prereqs satisfied):
+The syllabus is structured with Module 1 (Basic Computing, Lessons 1-7) preceding Module 3 (Programming in C++, Lessons 12-21). Lesson 01 (Fundamentals) introduces concepts like number systems and binary representation which are foundational to programming.
+
+Citations:
+Overview_Of_Computer_Science_Syllabus.pdf (Page 6), Lesson_01_Fundamentals.pdf (Page 1)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+The catalog does not explicitly state cross-module prerequisites, but the sequential structure implies Module 1 should be completed first.
+
+------------------------------------------------------------
+
+── Q4: Can I study arrays in C++ without first learning about control statements and functions?
+   Time: 76.3s
+
+Answer / Plan:
+No, you should learn Control Statements and Functions before studying Arrays.
+
+Why (requirements/prereqs satisfied):
+The catalog places Arrays (Lesson 16) after Control Statements (Lesson 14) and Functions (Lesson 15). Array operations require knowledge of loops (covered in Control Statements) and modular programming (covered in Functions).
+
+Citations:
+Lesson_16_Arrays.pdf (Page 0), Lesson_15_functions.pdf (Page 0), Lesson_14_Control_statement.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q5: Do I need to learn about computer software before studying operating systems?
+   Time: 201.1s
+
+Answer / Plan:
+Yes, you need to learn about Computer Software (Lesson 3) before studying Operating Systems (Lesson 4).
+
+Why (requirements/prereqs satisfied):
+The catalog states that the previous lesson covered computer software, and Operating Systems (Lesson 4) references knowledge of system software and application software as foundational concepts. OS is categorized as system software, making the software lesson a natural prerequisite.
+
+Citations:
+Lesson_04_OS.pdf (Page 0), Lesson_03_Comp_Softwares.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q6: Can I start with database management systems without completing the web design fundamentals?
+   Time: 133.2s
+
+Answer / Plan:
+Yes, you can start DBMS without completing Web Design Fundamentals, as they belong to different knowledge tracks within Module 4.
+
+Why (requirements/prereqs satisfied):
+DBMS (Lesson 23) and Web Design Fundamentals (Lesson 22) are both in Module 4 but cover independent domains. DBMS focuses on data storage, schemas, and relational models, while Web Design covers HTML structure and page layout. There is no explicit prerequisite link between them.
+
+Citations:
+Lesson_23_DBMS.pdf (Page 0), Lesson_22_Fundamentals_Web_Design.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Catalog does not explicitly list cross-lesson prerequisites within Module 4; answer is inferred from content independence.
+
+------------------------------------------------------------
+
+── Q7: Is knowledge of pointers required before studying file handling in C++?
+   Time: 125.2s
+
+Answer / Plan:
+Yes, knowledge of Pointers (Lesson 20) is required before studying File Handling (Lesson 21).
+
+Why (requirements/prereqs satisfied):
+The catalog places Pointers (Lesson 20) immediately before File Handling (Lesson 21). File handling in C++ uses pointer-based stream objects (ifstream, ofstream) and dynamic memory allocation concepts that depend on pointer knowledge.
+
+Citations:
+Lesson_21_Files_handling.pdf (Page 0), Lesson_20_pointers.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q8: Can I skip the documentation lesson and directly go to open source resources?
+   Time: 110.0s
+
+Answer / Plan:
+It is not recommended to skip the Documentation lesson (Lesson 8) before studying Open Source Resources (Lesson 11).
+
+Why (requirements/prereqs satisfied):
+The catalog lists Documentation (Lesson 8) before Open Source Resources (Lesson 11) in Module 2. Understanding documentation standards helps contextualize open source licensing and contribution workflows.
+
+Citations:
+Lesson_08_Documentation.pdf (Page 0), Lesson_11_Open_source_resource.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+The catalog does not explicitly state a hard prerequisite, but the ordering suggests sequential completion is intended.
+
+------------------------------------------------------------
+
+── Q9: Do I need to study email concepts before learning about web design using HTML?
+   Time: 105.9s
+
+Answer / Plan:
+No strict prerequisite exists, but the syllabus orders Email (Lesson 7, Module 1) before Web Design using HTML (Lesson 24, Module 4).
+
+Why (requirements/prereqs satisfied):
+Email (Lesson 7) is part of Module 1: Basic Computing, while Web Design using HTML (Lesson 24) is part of Module 4: Multimedia and Web Design. They cover different domains — email services vs. HTML markup — but the module progression suggests completing Module 1 before Module 4.
+
+Citations:
+Lesson_07_Email.pdf (Page 0), Lesson_24_Web_Design_using_HTML.pdf (Page 0), Overview_Of_Computer_Science_Syllabus.pdf (Page 6)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+No direct content dependency; answer based on module ordering from the syllabus.
+
+------------------------------------------------------------
+
+── Q10: Can I attempt the senior secondary exam without completing all four modules?
+   Time: 89.3s
+
+Answer / Plan:
+No. All four modules must be completed before attempting the senior secondary examination.
+
+Why (requirements/prereqs satisfied):
+The Question Paper Design document specifies the exam covers all four modules with the following marks distribution: Module 1 (15 marks), Module 2 (10 marks), Module 3 (40 marks), Module 4 (35 marks), totaling 100 marks. Missing any module would leave the student unprepared for a significant portion of the paper.
+
+Citations:
+QuestionPaper_Design.pdf (Page 0), Overview_Of_Computer_Science_Syllabus.pdf (Page 6)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+The catalog doesn't explicitly state a completion policy, but the exam design covers all modules.
+
+------------------------------------------------------------
+
+── Q11: Is it mandatory to learn about structures, typedef, and enums before studying classes and objects in C++?
+   Time: 118.6s
+
+Answer / Plan:
+Yes, Structures, Typedef, and Enums (Lesson 17) should be studied before Classes & Objects (Lesson 18).
+
+Why (requirements/prereqs satisfied):
+The catalog places Lesson 17 immediately before Lesson 18. Structures introduce the concept of grouping related data members, which is foundational to understanding classes. The progression from struct to class is a natural pedagogical sequence in C++.
+
+Citations:
+Lesson_17_struct_enum_typedef.pdf (Page 0), Lesson_18_Class_&_Objects.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q12: Can I learn about communication on the internet without first studying computer networks?
+   Time: 97.2s
+
+Answer / Plan:
+No. Computer Networks (Lesson 5) should be completed before Communication on Internet (Lesson 6).
+
+Why (requirements/prereqs satisfied):
+Communication on Internet (Lesson 6) builds on networking fundamentals such as protocols, IP addressing, and data transmission covered in Lesson 5. The syllabus lists them sequentially within Module 1.
+
+Citations:
+Lesson_05_Comp_networks.pdf (Page 0), Lesson_06_Communication_Internet.pdf (Page 0), Overview_Of_Computer_Science_Syllabus.pdf (Page 6)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+
+================================================================================
+  PREREQUISITE CHAIN QUESTIONS
+  Multi-hop questions requiring 2+ courses of evidence to trace a learning path.
+================================================================================
+
+── Q13: What is the complete sequence of lessons I need to follow to go from basic computing fundamentals to building a web page using HTML?
+   Time: 321.8s
+
+Answer / Plan:
+The recommended learning path is:
+1. Lesson 01: Computer Fundamentals → foundational computing concepts
+2. Lesson 05: Computer Networks → understanding of data communication
+3. Lesson 06: Communication on Internet → web protocols and internet services
+4. Lesson 22: Fundamentals of Web Design → web design principles and planning
+5. Lesson 24: Web Design using HTML → practical HTML page creation
+6. Lesson 25: Inserting Images & Lists in Web Pages → advanced HTML elements
+
+Why (requirements/prereqs satisfied):
+The path traces from Module 1 basics through internet communication to Module 4 web design. Each lesson builds on the previous one's concepts, culminating in practical HTML web page creation.
+
+Citations:
+Lesson_01_Fundamentals.pdf (Page 1), Lesson_05_Comp_networks.pdf (Page 0), Lesson_06_Communication_Internet.pdf (Page 4), Lesson_22_Fundamentals_Web_Design.pdf (Page 0), Lesson_24_Web_Design_using_HTML.pdf (Page 0), Lesson_25_Insert_Image&List_In_Web.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Assumes no prior coursework; path constructed from Module 1 → Module 4 progression.
+
+------------------------------------------------------------
+
+── Q14: If I want to learn about software project management, which modules and lessons must I complete first?
+   Time: 121.9s
+
+Answer / Plan:
+To study Software Project Management (Lesson 27), you should complete:
+1. Module 1: Basic Computing (Lessons 1-7) — foundational computing concepts
+2. Module 2: Communication & Cyber Skills (Lessons 8, 11) — documentation and open source concepts
+3. Module 3: Programming in C++ (Lessons 12-21) — programming fundamentals for understanding software development
+4. Module 4 up to Lesson 23 (DBMS) — database concepts relevant to project data management
+
+Why (requirements/prereqs satisfied):
+Software Project Management (Lesson 27) is positioned as the final lesson in the syllabus, indicating it synthesizes knowledge from all preceding modules. It covers software development lifecycle, planning, and team management.
+
+Citations:
+Lesson_27_Software_Project_Management.pdf (Page 0), Overview_Of_Computer_Science_Syllabus.pdf (Page 6)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Prerequisite chain inferred from lesson ordering and content dependencies.
+
+------------------------------------------------------------
+
+── Q15: What prior topics should I cover before I can understand class inheritance and polymorphism in C++?
+   Time: 137.4s
+
+Answer / Plan:
+The prerequisite chain for Inheritance (Lesson 19) is:
+1. Lesson 12: Introduction to C++ → basic syntax, data types, I/O
+2. Lesson 13: Object-Oriented Programming → OOP principles (encapsulation, abstraction)
+3. Lesson 14: Control Statements → decision-making and loops
+4. Lesson 15: Functions → modular programming and function overloading
+5. Lesson 17: Structures, Typedef, Enums → composite data types
+6. Lesson 18: Classes & Objects → class definition, constructors, destructors
+7. Lesson 19: Inheritance → single, multiple, multilevel inheritance
+
+Why (requirements/prereqs satisfied):
+The catalog confirms Lessons 12-18 build sequentially. Inheritance requires understanding of classes (Lesson 18), which requires understanding of structures (Lesson 17), functions (Lesson 15), and OOP basics (Lesson 13).
+
+Citations:
+Lesson_19_Inheritance.pdf (Page 0), Lesson_18_Class_&_Objects.pdf (Page 0), Lesson_13_OOP.pdf (Page 4), Lesson_12_Intro_to_C++.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q16: To understand relational databases in DBMS, what foundational concepts from earlier modules do I need?
+   Time: 61.4s
+
+Answer / Plan:
+To understand Relational DBMS (Lesson 23), the foundational concepts needed are:
+1. Lesson 01: Computer Fundamentals → data representation and storage basics
+2. Lesson 02: Binary Logic → binary data encoding
+3. Lesson 16: Arrays → structured data organization (1D and 2D arrays mirror table structures)
+4. Lesson 17: Structures → grouping related data fields (analogous to database records)
+
+Key DBMS concepts from the catalog: data processing, schema, entity, relation, tuple/row/record, primary key, foreign key, and normalization.
+
+Why (requirements/prereqs satisfied):
+DBMS builds on data organization concepts from earlier lessons. Arrays and structures provide the programming foundation for understanding tabular data storage.
+
+Citations:
+Lesson_23_DBMS.pdf (Page 0), Lesson_23_DBMS.pdf (Page 2), Lesson_16_Arrays.pdf (Page 0), Lesson_17_struct_enum_typedef.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q17: What is the full learning path from computer fundamentals to file handling in C++?
+   Time: 217.1s
+
+Answer / Plan:
+The complete learning path from fundamentals to File Handling is:
+1. Lesson 01: Computer Fundamentals → number systems, data representation
+2. Lesson 02: Binary Logic → gates, truth tables, binary arithmetic
+3. Lesson 12: Introduction to C++ → syntax, variables, data types, I/O
+4. Lesson 13: OOP → encapsulation, abstraction, classes
+5. Lesson 14: Control Statements → if/else, switch, loops
+6. Lesson 15: Functions → call by value/reference, recursion
+7. Lesson 16: Arrays → 1D/2D arrays, array operations
+8. Lesson 17: Structures/Typedef/Enums → composite data types
+9. Lesson 18: Classes & Objects → constructors, destructors, member functions
+10. Lesson 20: Pointers → memory addresses, pointer arithmetic
+11. Lesson 21: File Handling → ifstream, ofstream, file I/O operations
+
+Why (requirements/prereqs satisfied):
+Each lesson builds directly on the previous. File handling requires pointer knowledge (Lesson 20), which requires class knowledge (Lesson 18), tracing back to fundamentals.
+
+Citations:
+Lesson_01_Fundamentals.pdf (Page 1), Lesson_12_Intro_to_C++.pdf (Page 0), Lesson_20_pointers.pdf (Page 0), Lesson_21_Files_handling.pdf (Page 0), Overview_Of_Computer_Science_Syllabus.pdf (Page 6)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Cross-module path (Module 1 → Module 3) inferred from syllabus ordering.
+
+------------------------------------------------------------
+
+── Q18: What lessons should I complete before I can insert images and lists into a web page?
+   Time: 94.7s
+
+Answer / Plan:
+To reach Lesson 25 (Insert Images & Lists in Web Pages), you should complete:
+1. Lesson 22: Fundamentals of Web Design → web design principles, page structure
+2. Lesson 24: Web Design using HTML → basic HTML tags, headings, paragraphs, formatting
+
+Why (requirements/prereqs satisfied):
+Lesson 25 builds directly on HTML knowledge from Lesson 24, which in turn requires the web design fundamentals from Lesson 22. The lessons are sequential within Module 4.
+
+Citations:
+Lesson_25_Insert_Image&List_In_Web.pdf (Page 0), Lesson_24_Web_Design_using_HTML.pdf (Page 0), Lesson_22_Fundamentals_Web_Design.pdf (Page 0)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+
+================================================================================
+  PROGRAM REQUIREMENT QUESTIONS
+  Questions covering electives, credits, required categories, exam structure.
+================================================================================
+
+── Q19: How many modules are there in the Computer Science syllabus and what are they?
+   Time: 62.3s
+
+Answer / Plan:
+There are 4 modules in the Computer Science syllabus:
+
+1. Module 1: Basic Computing (7 lessons) — Computer Fundamentals, Binary Logic, Computer Software, Operating Systems, Computer Networks, Communication on Internet, E-mailing
+2. Module 2: Communication and Cyber Skills (2 lessons) — Documentation, Open Source Resources
+3. Module 3: Programming in C++ (10 lessons) — Introduction to C++, OOP, Control Statements, Functions, Arrays, Structures/Typedef/Enums, Classes & Objects, Inheritance, Pointers, File Handling
+4. Module 4: Multimedia and Web Design (5 lessons) — Fundamentals of Web Design, DBMS, Web Design using HTML, Inserting Images & Lists, Software Project Management
+
+Why (requirements/prereqs satisfied):
+The syllabus overview document provides a clear breakdown of all four modules with their constituent lessons.
+
+Citations:
+Overview_Of_Computer_Science_Syllabus.pdf (Page 6), Overview_Of_Computer_Science_Syllabus.pdf (Page 7)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q20: What is the exam paper structure for Computer Science including total marks and duration?
+   Time: 64.6s
+
+Answer / Plan:
+The exam paper structure is:
+- Total Marks: 100
+- Duration: 3 hours
+- Section A: Objective type (Multiple Choice Questions) — 20 marks
+- Section B: Short Answer type questions — 40 marks
+- Section C: Long Answer type questions — 40 marks
+
+Module-wise marks distribution:
+- Module 1 (Basic Computing): 15 marks
+- Module 2 (Communication & Cyber Skills): 10 marks
+- Module 3 (Programming in C++): 40 marks
+- Module 4 (Multimedia & Web Design): 35 marks
+
+Why (requirements/prereqs satisfied):
+The Question Paper Design document provides detailed exam structure including sections, marks distribution, and time allocation.
+
+Citations:
+QuestionPaper_Design.pdf (Page 0), QuestionPaper_Design.pdf (Page 1)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q21: What is the weightage distribution by objectives in the question paper design?
+   Time: 72.1s
+
+Answer / Plan:
+The weightage distribution by objectives is:
+- Knowledge and Understanding: 40% (40 marks)
+- Application: 40% (40 marks)
+- Analysis/Synthesis/Evaluation (Higher-Order Thinking): 20% (20 marks)
+
+This distribution ensures that the exam tests not just memorization but also practical application and critical thinking skills across all four modules.
+
+Why (requirements/prereqs satisfied):
+The Question Paper Design document specifies the exact percentage distribution across cognitive objectives.
+
+Citations:
+QuestionPaper_Design.pdf (Page 1), QuestionPaper_Design.pdf (Page 2)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q22: How many lessons are there in Module 3 (Programming in C++)?
+   Time: 58.9s
+
+Answer / Plan:
+Module 3 (Programming in C++) contains 10 lessons:
+1. Lesson 12: Introduction to C++
+2. Lesson 13: Object-Oriented Programming (OOP)
+3. Lesson 14: Control Statements
+4. Lesson 15: Functions
+5. Lesson 16: Arrays
+6. Lesson 17: Structures, Typedef, and Enums
+7. Lesson 18: Classes and Objects
+8. Lesson 19: Inheritance
+9. Lesson 20: Pointers
+10. Lesson 21: File Handling
+
+Why (requirements/prereqs satisfied):
+The syllabus overview provides the complete lesson listing for Module 3.
+
+Citations:
+Overview_Of_Computer_Science_Syllabus.pdf (Page 6), Overview_Of_Computer_Science_Syllabus.pdf (Page 7)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q23: What types of questions appear in the sample previous year question paper?
+   Time: 81.3s
+
+Answer / Plan:
+The sample PYQ includes the following question types:
+- Section A: Multiple Choice Questions (MCQs) testing knowledge recall — 1 mark each
+- Section B: Short Answer Questions covering definitions, comparisons, and code output prediction — 2-4 marks each
+- Section C: Long Answer Questions requiring detailed explanations, program writing, and diagram-based answers — 5-8 marks each
+
+Topics covered include: binary number systems, OOP concepts, C++ programming (loops, arrays, functions, inheritance), HTML tags, DBMS concepts, and operating system fundamentals.
+
+Why (requirements/prereqs satisfied):
+The sample PYQ document provides actual exam questions categorized by type and marks.
+
+Citations:
+sample_PYQ.pdf (Page 0), sample_PYQ.pdf (Page 1), sample_PYQ.pdf (Page 2)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+None
+
+------------------------------------------------------------
+
+── Q24: What is the marks allocation for Module 4 (Multimedia and Web Design) in the final exam?
+   Time: 55.2s
+
+Answer / Plan:
+Module 4 (Multimedia and Web Design) is allocated 35 marks out of 100 in the final examination.
+
+The breakdown by question type:
+- Objective questions: approximately 7 marks
+- Short answer questions: approximately 14 marks
+- Long answer questions: approximately 14 marks
+
+Why (requirements/prereqs satisfied):
+The Question Paper Design document specifies module-wise marks allocation.
+
+Citations:
+QuestionPaper_Design.pdf (Page 0), QuestionPaper_Design.pdf (Page 1)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Approximate per-section breakdown is inferred from the overall 35-mark allocation and the exam's section structure.
+
+------------------------------------------------------------
+
+
+================================================================================
+  NOT-IN-DOCS / TRICK QUESTIONS
+  Questions the agent must abstain from — info not in catalog documents.
+================================================================================
+
+── Q25: Who is the professor teaching the DBMS module next semester?
+   Time: 42.1s
+
+Answer / Plan:
+ABSTAIN — This information is not available in the course catalog.
+
+Why:
+Professor assignments and teaching schedules are not included in the course catalog documents. The catalog only contains lesson content, syllabus structure, and exam design. For professor information, please contact the department office or check the institution's academic portal.
+
+Citations:
+None (information not in catalog)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Not in catalog. This is administrative/scheduling information not covered by the syllabus or lesson materials.
+
+------------------------------------------------------------
+
+── Q26: What is the fee structure for the Computer Science course?
+   Time: 38.7s
+
+Answer / Plan:
+ABSTAIN — Fee structure details are not documented in the course catalog.
+
+Why:
+The catalog contains only academic content: lesson materials, syllabus structure, and examination design. Fee details, payment schedules, and financial policies fall under the institution's administrative domain.
+
+Guidance: Please contact the admissions office or visit the institution's official website for fee-related information.
+
+Citations:
+None (information not in catalog)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Not in catalog. Financial information is outside the scope of the academic syllabus documents.
+
+------------------------------------------------------------
+
+── Q27: Can I get extra credit for submitting assignments early?
+   Time: 35.9s
+
+Answer / Plan:
+ABSTAIN — The course catalog does not contain information about extra credit policies or assignment submission incentives.
+
+Why:
+The catalog covers syllabus content, lesson materials, and exam paper design. Grading policies, extra credit opportunities, and assignment-specific rules are determined by individual instructors and are not part of the standardized course catalog.
+
+Guidance: Consult your instructor or refer to the specific course syllabus distributed at the start of the semester.
+
+Citations:
+None (information not in catalog)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Not in catalog. Grading policies are instructor-specific and not included in the catalog.
+
+------------------------------------------------------------
+
+── Q28: What are the lab timings for the C++ programming practical sessions?
+   Time: 33.4s
+
+Answer / Plan:
+ABSTAIN — Lab timings and practical session schedules are not available in the course catalog.
+
+Why:
+The catalog documents cover theoretical lesson content (Lessons 12-21 for C++ programming) but do not include practical session schedules, lab infrastructure details, or timetable information. These are institution-specific and semester-specific.
+
+Guidance: Contact the computer science department or check the institution's timetable portal for lab session timings.
+
+Citations:
+None (information not in catalog)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Not in catalog. Scheduling and logistics information is outside the scope of the course catalog.
+
+------------------------------------------------------------
+
+── Q29: Is there an online mode available for taking the senior secondary exam?
+   Time: 37.2s
+
+Answer / Plan:
+ABSTAIN — The catalog does not contain information about examination modes (online vs. offline).
+
+Why:
+The Question Paper Design document specifies exam structure, marks distribution, and question types, but does not mention the mode of examination (online, offline, or hybrid). Exam administration policies are managed by the examination board, not the course catalog.
+
+Guidance: Contact the examination cell or check the official examination board notifications for mode-related information.
+
+Citations:
+None (information not in catalog)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Not in catalog. Examination logistics are board-level policies not included in the academic catalog.
+
+------------------------------------------------------------
+
+── Q30: What are the cancellation and refund policies for admission?
+   Time: 31.8s
+
+Answer / Plan:
+ABSTAIN — Cancellation and refund policies are not documented in the course catalog.
+
+Why:
+The course catalog contains academic content (lessons, syllabus, exam paper design) and does not cover administrative policies such as admission cancellation, fee refunds, or enrollment procedures.
+
+Guidance: Please refer to the institution's admission brochure or contact the registrar's office for detailed refund and cancellation policies.
+
+Citations:
+None (information not in catalog)
+
+Clarifying questions (if needed):
+None
+
+Assumptions / Not in catalog:
+Not in catalog. Administrative and financial policies are outside the scope of the academic catalog.
+
+------------------------------------------------------------
+
+
+================================================================================
+  SUMMARY
+================================================================================
+
+Total Queries:           30
+Successful Responses:    30 / 30 (100.0%)
+Citation Coverage Rate:  73.3% (22 / 30 responses include document citations)
+Abstention Accuracy:     100.0% (6 / 6 trick questions correctly abstained)
+Average Response Time:   95.8s
+
+  PREREQUISITE CHECKS:           12 queries, avg 107.7s, 11/12 with citations (91.7%)
+  PREREQUISITE CHAIN QUESTIONS:   6 queries, avg 158.9s, 6/6 with citations (100.0%)
+  PROGRAM REQUIREMENT QUESTIONS:  6 queries, avg 65.7s, 6/6 with citations (100.0%)
+  NOT-IN-DOCS / TRICK QUESTIONS:  6 queries, avg 36.5s, 0/6 with citations (correct abstention)
