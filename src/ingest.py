@@ -14,7 +14,6 @@ def ingest_data():
     if not os.path.exists(DATA_DIR):
         print(f"Data directory {DATA_DIR} not found.")
         return
-
     print("Loading documents from:", DATA_DIR)
     
     # Load all PDFs and HTMLs
